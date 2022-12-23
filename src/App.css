@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+.light {
+  background-color: #fff;
+  color: #333;
+}
+
+/** START LOADER STYLE **/
+
+@keyframes bouncing-loader {
+  to {
+    opacity: 0.1;
+    transform: translate3d(0, -16px, 0);
+  }
+}
+
+.bouncing-loader {
+  display: flex;
+  justify-content: center;
+}
+
+.bouncing-loader > div {
+  width: 16px;
+  height: 16px;
+  margin: 3rem 0.2rem;
+  background: #8385aa;
+  border-radius: 50%;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+
+.bouncing-loader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bouncing-loader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/** END LOADER STYLE **/
+
+/** START HEADER STYLE **/
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+header .title h1 {
+  font-size: 40px;
+}
+
+header .filters {
+  width: 530px;
+  max-width: 95%;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .search {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+header .sort {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+header .filters input,
+header .filters select {
+  font-size: 15px;
+  font-family: inherit;
+  color: #292929;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: transparent;
+  border: 1px solid #292929;
+  outline: none;
+}
+
+header .filters input::placeholder {
+  color: #292929;
+}
+
+
+header .filters1 {
+  width: 530px;
+  max-width: 95%;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+header .filters1 input,
+header .filters1 select {
+  font-size: 15px;
+  font-family: inherit;
+  color: rgb(255, 255, 255);
+  background-color: #ffffff;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  outline: none;
+}
+
+header .filters1 input::placeholder {
+  color: #ffffff;
+}
+
+/** END HEADER STYLE **/
+
+.posts {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.posts .post {
+  padding: 30px;
+  border: 1px solid #292929;
+  color: #292929;
+}
+
+.posts .post h2 {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.posts .post p {
+  font-size: 16px;
+}
+
+.posts .post1 {
+  padding: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.posts .post1 h2 {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.posts .post1 p {
+  font-size: 16px;
+}
+
+/** END POSTS STYLE **/
+
+@media screen and (max-width: 768px) {
+  .posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .posts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

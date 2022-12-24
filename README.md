@@ -1,4 +1,4 @@
-# React Redux Filtering
+# React Redux Filtering Json Placeholder
 
 Live Demo  :  https://react-redux-filtering-and-dark-theme.netlify.app/
 

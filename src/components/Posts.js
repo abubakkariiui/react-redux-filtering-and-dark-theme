@@ -31,12 +31,6 @@ const Posts = ({theme}) => {
 	const indexOfFirstPost = indexOfLastPost - postPerPage;
 	const filterPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
-	useEffect(() => {
-		console.log("indexOfLastPost",indexOfLastPost);
-		console.log("indexOfFirstPost",indexOfFirstPost);
-		console.log("filterPosts",filterPosts);
-	},[])
-
 	return (
 		<>
 			<Header search={search} theme={theme} setSearch={setSearch} onChange={handleChangeSearch} />
@@ -46,7 +40,7 @@ const Posts = ({theme}) => {
 				<div className="container">
 					<div className="posts">
 						{filterPosts.map((post) => (
-							<PostCard post={post} theme={theme} />
+							<PostCard key={post.id} post={post} theme={theme} />
 						))}
 					</div>
 					{totalPosts > postPerPage && (
